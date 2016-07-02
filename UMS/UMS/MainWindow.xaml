@@ -4,9 +4,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UMS"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        mc:Ignorable="d" Height="600" Width="1000" WindowStyle="None" BorderBrush="Transparent" WindowStartupLocation="CenterScreen" Icon="images/icon.png" AllowsTransparency="True">
+    <Window.Background>
+        <ImageBrush ImageSource="images/mainMenu.png" />
+    </Window.Background>
+    <Window.OpacityMask>
+        <ImageBrush  ImageSource="images/mainMenu.png"/>
+    </Window.OpacityMask>
+    <Grid Margin="0,0,-183,-181" VerticalAlignment="Top">
+        <Button x:Name="btn_close" Content="X" HorizontalAlignment="Left" Margin="954,10,0,9" VerticalAlignment="Top" Width="30" BorderThickness="0" FontSize="14.667" FontFamily="Microsoft Yi Baiti" Height="20" Background="#FFFF4949" Click="button_Click">
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF2222" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="btn_minimize" Content="_" HorizontalAlignment="Left" Margin="916,10,0,0" VerticalAlignment="Top" Width="30" BorderThickness="0" FontSize="14.667" FontFamily="Microsoft Yi Baiti" Height="20" Background="#FFD6EEFF" Click="button_Click_1">
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF2222" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+        </Button>
+        <Label x:Name="lable" Content="Menu" HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Nirmala UI" RenderTransformOrigin="0.431,0.484"/>
+        <Button x:Name="FF" HorizontalAlignment="Left" BorderBrush="Transparent" Margin="76,138,0,-99" VerticalAlignment="Top" Width="100" Height="100" BorderThickness="0">
+            <Button.BindingGroup>
+                <BindingGroup/>
+            </Button.BindingGroup>
+            <Button.Background>
+                <ImageBrush ImageSource="images/MetroUI_Firefox.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
